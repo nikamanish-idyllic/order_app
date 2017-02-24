@@ -12,6 +12,7 @@ app.use(express.static(__dirname + '/public'));
 var orders = [];
 app.locals.orders = orders;
 
+
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.get('/', function(request,response){
@@ -23,13 +24,15 @@ app.get('/new-order', function(request, response){
 });
 
 app.post('/new-order', function(request, response){
-	if(!request.body.table_no || !request.body.item_list){
+	if(!request.body.table_no || !request.body.item_list2){
 		response.status(400).send("Both fields must be present");
 		return;
 	}
+	
 	orders.push({
 		"table_no" : request.body.table_no,
-		"item_list":request.body.item_list,
+		"item_list": request.body.item_list,
+		"item_list2": request.body.item_list2,
 		"ordered_at": new Date()
 	});
 	response.redirect("/");

@@ -16,15 +16,23 @@
 
 		          <label for="table_no">Table Number</label>
 		        </div>
-		        <div class="input-field col s6 offset-s3">
-		          <input id="item_list" type="text" class="validate" name="item_list">
-		          <label for="item_list">Item List</label>
-		        </div>
-		      </div>
+		        
+		      <div class="input-field col s6 offset-s3">
+			    <select multiple name="item_list2">
+			    	 <option value="" disabled selected>Choose your option</option>
+			      
+			        <option value=" Paneer Tikka">Paneer Tikka</option>
+			        <option value=" Veg Kolhapuri">Veg Kolhapuri</option>
+			      
+			        <option value=" Chicken Masala">Chicken Masala</option>
+			        <option value=" Butter Chicken">Butter Chicken</option>
+			     
+			    </select>
+			    <label>Materialize Multiple Select</label>
+			  </div>
 
-		      
 		      <div class="row">
-			      <div class="center-align col s12 ">
+			      <div class="center-align col s12">
 			          <button class="waves-effect waves-light btn green submit-button" type="submit" name="submit" value="">Add your order
 			            <i class="fa fa-paper-plane left" aria-hidden="true"></i>
 			          </button>
